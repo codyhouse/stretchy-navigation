@@ -40,6 +40,7 @@ Stretchy Nav style - common to:
   z-index: 2;
   top: 40px;
   right: 5%;
+  pointer-events: none;
 }
 .cd-stretchy-nav .stretchy-nav-bg {
   /* this is the stretching navigation background */
@@ -55,6 +56,9 @@ Stretchy Nav style - common to:
   -webkit-transition: height 0.2s, box-shadow 0.2s;
   -moz-transition: height 0.2s, box-shadow 0.2s;
   transition: height 0.2s, box-shadow 0.2s;
+}
+.cd-stretchy-nav.nav-is-visible {
+  pointer-events: auto;
 }
 .cd-stretchy-nav.nav-is-visible .stretchy-nav-bg {
   height: 100%;
@@ -73,6 +77,7 @@ Stretchy Nav style - common to:
   overflow: hidden;
   white-space: nowrap;
   color: transparent;
+  pointer-events: auto;
 }
 .cd-nav-trigger span, .cd-nav-trigger span::after, .cd-nav-trigger span::before {
   /* this is the hamburger icon */

@@ -52,6 +52,7 @@ Stretchy Nav style - common to:
 	z-index: 2;
 	top: 40px;
 	right: 5%;
+	pointer-events: none;
 
 	.stretchy-nav-bg {
 		/* this is the stretching navigation background */
@@ -65,6 +66,10 @@ Stretchy Nav style - common to:
 		background: $color-2;
 		box-shadow: 0 1px 4px rgba(#000, .2);
 		@include transition(height .2s, box-shadow .2s);
+	}
+
+	&.nav-is-visible {
+		pointer-events: auto;
 	}
 
 	&.nav-is-visible .stretchy-nav-bg {
@@ -85,6 +90,7 @@ Stretchy Nav style - common to:
 	overflow: hidden;
 	white-space: nowrap;
 	color: transparent;
+	pointer-events: auto;
 
 	span, span::after, span::before {
 		/* this is the hamburger icon */
